@@ -1,4 +1,3 @@
-// api/send-email.js
 import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
@@ -17,11 +16,7 @@ export default async function handler(req, res) {
             from: email,
             to: 'sukritchopra2003@gmail.com',
             subject: `Message from ${name}`,
-            text: bio,
-            age: age,
-            gender:gender,
-            eating_style:eating_style,
-            food:food
+            text: `Bio: ${bio}\nAge: ${age}\nGender: ${gender}\nEating Style: ${eating_style}\nFood: ${food}`
         };
 
         try {
